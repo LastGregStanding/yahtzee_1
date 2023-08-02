@@ -2,3 +2,19 @@
   background-color: black;
   color: white;
 }
+
+.die {
+  display: flex;
+  gap: 10px;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.keep {
+  margin: 20px;
+  background-color: green;
+}
