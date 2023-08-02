@@ -36,3 +36,48 @@ img {
   flex-wrap: wrap;
   width: 50px;
 }
+
+.upper_section_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+}
+.lower_section_1 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+}
+.upper_section_2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+}
+.lower_section_2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+}
+
+.cell {
+  background-color: white;
+  color: black;
+  border: black solid 1px;
+}
+.upper_sections {
+  display: flex;
+  gap: 20px;
+}
+.lower_sections {
+  display: flex;
+  gap: 20px;
+}
+.player_scorecards {
+  display: flex;
+  gap: 300px;
+}
