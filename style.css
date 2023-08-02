@@ -21,8 +21,7 @@
 }
 
 .roll_btn {
-  padding: 5px;
-  margin: 50px;
+  height: 20px;
   background-color: red;
 }
 
@@ -80,4 +79,12 @@ img {
 .player_scorecards {
   display: flex;
   gap: 300px;
+}
+.turn_roll {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+.hidden {
+  color: transparent;
 }
