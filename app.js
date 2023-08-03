@@ -9,11 +9,11 @@ const zeroBtns = document.querySelector(".zero_btns");
 let turn = 2;
 const dice = [];
 let rollCount = 0;
-let gameRound = 1;
 let roundScore;
 // Random number 1-6
 const randomNumber = () => Math.floor(Math.random() * 6 + 1);
 
+//#region Rolling dice functionality and hovering
 const rollDice = function () {
   const turnOver = document.querySelector(".turn_over");
   // Reset keep buttons for next player
@@ -47,12 +47,9 @@ const rollDice = function () {
   }
 
   rollCount++;
-  console.log(rollCount);
 
   // Black out keep buttons for end of turn
   if (rollCount === 3) {
-    gameRound++;
-    gameOver();
     rollCount = 0;
     turnOver.classList.remove("hidden");
   }
@@ -60,20 +57,41 @@ const rollDice = function () {
 
 rollBtn.addEventListener("click", function () {
   rollDice();
+  rollBtn.classList.remove("hover");
 });
 
+rollBtn.addEventListener("mouseover", function () {
+  rollBtn.classList.add("hover");
+});
+rollBtn.addEventListener("mouseout", function () {
+  rollBtn.classList.remove("hover");
+});
+//#endregion
+
 // Keep button
-keepBtns.forEach((btn) =>
+keepBtns.forEach((btn) => {
   btn.addEventListener("click", function () {
     if (btn.classList.contains("pressed")) {
+      btn.classList.remove("hover");
       btn.style.backgroundColor = "green";
       btn.classList.remove("pressed");
     } else if (!btn.classList.contains("pressed")) {
+      btn.classList.remove("hover");
       btn.style.backgroundColor = "blue";
       btn.classList.add("pressed");
     }
-  })
-);
+  });
+
+  btn.addEventListener("mouseover", function () {
+    btn.classList.add("hover");
+  });
+  btn.addEventListener("mouseout", function () {
+    if (!btn.classList.contains("pressed")) {
+      btn.style.backgroundColor = "green";
+    }
+    btn.classList.remove("hover");
+  });
+});
 
 let addNumbers = function (dice) {
   let number = 0;
@@ -332,8 +350,17 @@ for (let i = 5; i < 21; i += 3) {
   btns.push(btn);
 }
 
-btns.forEach((btn) =>
+btns.forEach((btn) => {
+  btn.addEventListener("mouseover", function () {
+    btn.classList.add("hover");
+  });
+  btn.addEventListener("mouseout", function () {
+    btn.classList.remove("hover");
+  });
+
   btn.addEventListener("click", function () {
+    btn.classList.remove("hover");
+
     // Aces
     if (btn.classList.contains("aces")) {
       let ones = dice.filter((e) => {
@@ -460,8 +487,9 @@ btns.forEach((btn) =>
       }
     }
     checkScore();
-  })
-);
+    gameOver();
+  });
+});
 //#endregion
 
 //#region Bottom Buttons
@@ -497,8 +525,15 @@ for (let i = 5; i < 24; i += 3) {
   btns2.push(btn);
 }
 
-btns2.forEach((btn) =>
+btns2.forEach((btn) => {
+  btn.addEventListener("mouseover", function () {
+    btn.classList.add("hover");
+  });
+  btn.addEventListener("mouseout", function () {
+    btn.classList.remove("hover");
+  });
   btn.addEventListener("click", function () {
+    btn.classList.remove("hover");
     // 3 of a Kind
     if (btn.classList.contains("three_kind")) {
       roundScore = addNumbers2(dice);
@@ -611,8 +646,9 @@ btns2.forEach((btn) =>
       }
     }
     checkScore();
-  })
-);
+    gameOver();
+  });
+});
 
 // Buttons for zero
 let btns0 = [];
@@ -647,8 +683,15 @@ for (let i = 5; i < 24; i += 3) {
   btns0.push(btn);
 }
 
-btns0.forEach((btn) =>
+btns0.forEach((btn) => {
+  btn.addEventListener("mouseover", function () {
+    btn.classList.add("hover");
+  });
+  btn.addEventListener("mouseout", function () {
+    btn.classList.remove("hover");
+  });
   btn.addEventListener("click", function () {
+    btn.classList.remove("hover");
     // 3 of a Kind
     if (btn.classList.contains("three_kind")) {
       roundScore = 0;
@@ -761,8 +804,9 @@ btns0.forEach((btn) =>
       }
     }
     checkScore();
-  })
-);
+    gameOver();
+  });
+});
 //#endregion
 
 //#region Scoring
@@ -857,8 +901,12 @@ const checkScore = function () {
 
 // Game over scenario!
 const gameOver = function () {
-  console.log(gameRound);
-  if (gameRound === 27) {
+  if (
+    upper1Arr.every((element) => element.textContent !== "") &&
+    upper2Arr.every((element) => element.textContent !== "") &&
+    lower1Arr.every((element) => element.textContent !== "") &&
+    lower2Arr.every((element) => element.textContent !== "")
+  ) {
     if (Number(lower1Arr[32].textContent) > Number(lower2Arr[32].textContent)) {
       lower1Arr[32].style.backgroundColor = "green";
       lower2Arr[32].style.backgroundColor = "red";
@@ -868,7 +916,6 @@ const gameOver = function () {
       lower1Arr[32].style.backgroundColor = "red";
       lower2Arr[32].style.backgroundColor = "green";
     } else {
-      console.log("it was a tie");
       lower1Arr[32].style.backgroundColor = "pink";
       lower2Arr[32].style.backgroundColor = "pink";
     }
