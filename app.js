@@ -102,31 +102,31 @@ upper1Arr[1].textContent = "How To Score";
 upper1Arr[2].textContent = "Game Score";
 upper1Arr[3].textContent = "Aces";
 upper1Arr[4].textContent = "Add Aces";
-upper1Arr[5].textContent = null;
+upper1Arr[5].textContent = "";
 upper1Arr[6].textContent = "Twos";
 upper1Arr[7].textContent = "Add Twos";
-upper1Arr[8].textContent = null;
+upper1Arr[8].textContent = "";
 upper1Arr[9].textContent = "Threes";
 upper1Arr[10].textContent = "Add Threes";
-upper1Arr[11].textContent = null;
+upper1Arr[11].textContent = "";
 upper1Arr[12].textContent = "Fours";
 upper1Arr[13].textContent = "Add Fours";
-upper1Arr[14].textContent = null;
+upper1Arr[14].textContent = "";
 upper1Arr[15].textContent = "Fives";
 upper1Arr[16].textContent = "Add Fives";
-upper1Arr[17].textContent = null;
+upper1Arr[17].textContent = "";
 upper1Arr[18].textContent = "Sixes";
 upper1Arr[19].textContent = "Add Sixes";
-upper1Arr[20].textContent = null;
+upper1Arr[20].textContent = "";
 upper1Arr[21].textContent = "Total Score";
 upper1Arr[22].textContent = "------------->";
-upper1Arr[23].textContent = null;
+upper1Arr[23].textContent = "";
 upper1Arr[24].textContent = "Bonus >=63";
 upper1Arr[25].textContent = "Score 35";
-upper1Arr[26].textContent = null;
+upper1Arr[26].textContent = "";
 upper1Arr[27].textContent = "Upper Total";
 upper1Arr[28].textContent = "------------->";
-upper1Arr[29].textContent = null;
+upper1Arr[29].textContent = "";
 
 for (let i = 21; i < upper1Arr.length; i++) {
   upper1Arr[i].style.backgroundColor = "cyan";
@@ -153,34 +153,34 @@ lower1Arr[1].textContent = "How To Score";
 lower1Arr[2].textContent = "Game Score";
 lower1Arr[3].textContent = "3 of a kind";
 lower1Arr[4].textContent = "Add All Dice";
-lower1Arr[5].textContent = null;
+lower1Arr[5].textContent = "";
 lower1Arr[6].textContent = "4 of a kind";
 lower1Arr[7].textContent = "Add All Dice";
-lower1Arr[8].textContent = null;
+lower1Arr[8].textContent = "";
 lower1Arr[9].textContent = "Full House";
 lower1Arr[10].textContent = "Score 25";
-lower1Arr[11].textContent = null;
+lower1Arr[11].textContent = "";
 lower1Arr[12].textContent = "Sm. Straight";
 lower1Arr[13].textContent = "Score 30";
-lower1Arr[14].textContent = null;
+lower1Arr[14].textContent = "";
 lower1Arr[15].textContent = "Lg. Straight";
 lower1Arr[16].textContent = "Score 40";
-lower1Arr[17].textContent = null;
+lower1Arr[17].textContent = "";
 lower1Arr[18].textContent = "Yahtzee!";
 lower1Arr[19].textContent = "Score 50";
-lower1Arr[20].textContent = null;
+lower1Arr[20].textContent = "";
 lower1Arr[21].textContent = "Chance";
 lower1Arr[22].textContent = "Add All Dice";
-lower1Arr[23].textContent = null;
+lower1Arr[23].textContent = "";
 lower1Arr[24].textContent = "Lower Score";
 lower1Arr[25].textContent = "------------->";
-lower1Arr[26].textContent = null;
+lower1Arr[26].textContent = "";
 lower1Arr[27].textContent = "Upper Total";
 lower1Arr[28].textContent = "------------->";
-lower1Arr[29].textContent = null;
+lower1Arr[29].textContent = "";
 lower1Arr[30].textContent = "Grand Total";
 lower1Arr[31].textContent = "------------->";
-lower1Arr[32].textContent = null;
+lower1Arr[32].textContent = "";
 
 for (let i = 24; i < lower1Arr.length; i++) {
   lower1Arr[i].style.backgroundColor = "cyan";
@@ -208,31 +208,31 @@ upper2Arr[1].textContent = "How To Score";
 upper2Arr[2].textContent = "Game Score";
 upper2Arr[3].textContent = "Aces";
 upper2Arr[4].textContent = "Add Aces";
-upper2Arr[5].textContent = null;
+upper2Arr[5].textContent = "";
 upper2Arr[6].textContent = "Twos";
 upper2Arr[7].textContent = "Add Twos";
-upper2Arr[8].textContent = null;
+upper2Arr[8].textContent = "";
 upper2Arr[9].textContent = "Threes";
 upper2Arr[10].textContent = "Add Threes";
-upper2Arr[11].textContent = null;
+upper2Arr[11].textContent = "";
 upper2Arr[12].textContent = "Fours";
 upper2Arr[13].textContent = "Add Fours";
-upper2Arr[14].textContent = null;
+upper2Arr[14].textContent = "";
 upper2Arr[15].textContent = "Fives";
 upper2Arr[16].textContent = "Add Fives";
-upper2Arr[17].textContent = null;
+upper2Arr[17].textContent = "";
 upper2Arr[18].textContent = "Sixes";
 upper2Arr[19].textContent = "Add Sixes";
-upper2Arr[20].textContent = null;
+upper2Arr[20].textContent = "";
 upper2Arr[21].textContent = "Total Score";
 upper2Arr[22].textContent = "------------->";
-upper2Arr[23].textContent = null;
+upper2Arr[23].textContent = "";
 upper2Arr[24].textContent = "Bonus >=63";
 upper2Arr[25].textContent = "Score 35";
-upper2Arr[26].textContent = null;
+upper2Arr[26].textContent = "";
 upper2Arr[27].textContent = "Upper Total";
 upper2Arr[28].textContent = "------------->";
-upper2Arr[29].textContent = null;
+upper2Arr[29].textContent = "";
 
 for (let i = 21; i < upper2Arr.length; i++) {
   upper2Arr[i].style.backgroundColor = "cyan";
@@ -259,34 +259,34 @@ lower2Arr[1].textContent = "How To Score";
 lower2Arr[2].textContent = "Game Score";
 lower2Arr[3].textContent = "3 of a kind";
 lower2Arr[4].textContent = "Add All Dice";
-lower2Arr[5].textContent = null;
+lower2Arr[5].textContent = "";
 lower2Arr[6].textContent = "4 of a kind";
 lower2Arr[7].textContent = "Add All Dice";
-lower2Arr[8].textContent = null;
+lower2Arr[8].textContent = "";
 lower2Arr[9].textContent = "Full House";
 lower2Arr[10].textContent = "Score 25";
-lower2Arr[11].textContent = null;
+lower2Arr[11].textContent = "";
 lower2Arr[12].textContent = "Sm. Straight";
 lower2Arr[13].textContent = "Score 30";
-lower2Arr[14].textContent = null;
+lower2Arr[14].textContent = "";
 lower2Arr[15].textContent = "Lg. Straight";
 lower2Arr[16].textContent = "Score 40";
-lower2Arr[17].textContent = null;
+lower2Arr[17].textContent = "";
 lower2Arr[18].textContent = "Yahtzee!";
 lower2Arr[19].textContent = "Score 50";
-lower2Arr[20].textContent = null;
+lower2Arr[20].textContent = "";
 lower2Arr[21].textContent = "Chance";
 lower2Arr[22].textContent = "Add All Dice";
-lower2Arr[23].textContent = null;
+lower2Arr[23].textContent = "";
 lower2Arr[24].textContent = "Lower Score";
 lower2Arr[25].textContent = "------------->";
-lower2Arr[26].textContent = null;
+lower2Arr[26].textContent = "";
 lower2Arr[27].textContent = "Upper Total";
 lower2Arr[28].textContent = "------------->";
-lower2Arr[29].textContent = null;
+lower2Arr[29].textContent = "";
 lower2Arr[30].textContent = "Grand Total";
 lower2Arr[31].textContent = "------------->";
-lower2Arr[32].textContent = null;
+lower2Arr[32].textContent = "";
 
 for (let i = 24; i < lower2Arr.length; i++) {
   lower2Arr[i].style.backgroundColor = "cyan";
@@ -339,11 +339,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(ones);
       if (turn === 1) {
-        upper1Arr[5].classList.add("score_number");
-        upper1Arr[5].textContent = roundScore;
+        if (upper1Arr[5].textContent === "") {
+          upper1Arr[5].classList.add("score_number");
+          upper1Arr[5].textContent = roundScore;
+        }
       } else {
-        upper2Arr[5].classList.add("score_number");
-        upper2Arr[5].textContent = roundScore;
+        if (upper2Arr[5].textContent === "") {
+          upper2Arr[5].classList.add("score_number");
+          upper2Arr[5].textContent = roundScore;
+        }
       }
     }
 
@@ -356,11 +360,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(twos);
       if (turn === 1) {
-        upper1Arr[8].classList.add("score_number");
-        upper1Arr[8].textContent = roundScore;
+        if (upper1Arr[8].textContent === "") {
+          upper1Arr[8].classList.add("score_number");
+          upper1Arr[8].textContent = roundScore;
+        }
       } else {
-        upper2Arr[8].classList.add("score_number");
-        upper2Arr[8].textContent = roundScore;
+        if (upper2Arr[8].textContent === "") {
+          upper2Arr[8].classList.add("score_number");
+          upper2Arr[8].textContent = roundScore;
+        }
       }
     }
 
@@ -373,11 +381,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(threes);
       if (turn === 1) {
-        upper1Arr[11].classList.add("score_number");
-        upper1Arr[11].textContent = roundScore;
+        if (upper1Arr[11].textContent === "") {
+          upper1Arr[11].classList.add("score_number");
+          upper1Arr[11].textContent = roundScore;
+        }
       } else {
-        upper2Arr[11].classList.add("score_number");
-        upper2Arr[11].textContent = roundScore;
+        if (upper2Arr[11].textContent === "") {
+          upper2Arr[11].classList.add("score_number");
+          upper2Arr[11].textContent = roundScore;
+        }
       }
     }
 
@@ -390,11 +402,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(fours);
       if (turn === 1) {
-        upper1Arr[14].classList.add("score_number");
-        upper1Arr[14].textContent = roundScore;
+        if (upper1Arr[14].textContent === "") {
+          upper1Arr[14].classList.add("score_number");
+          upper1Arr[14].textContent = roundScore;
+        }
       } else {
-        upper2Arr[14].classList.add("score_number");
-        upper2Arr[14].textContent = roundScore;
+        if (upper2Arr[14].textContent === "") {
+          upper2Arr[14].classList.add("score_number");
+          upper2Arr[14].textContent = roundScore;
+        }
       }
     }
 
@@ -407,11 +423,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(fives);
       if (turn === 1) {
-        upper1Arr[17].classList.add("score_number");
-        upper1Arr[17].textContent = roundScore;
+        if (upper1Arr[17].textContent === "") {
+          upper1Arr[17].classList.add("score_number");
+          upper1Arr[17].textContent = roundScore;
+        }
       } else {
-        upper2Arr[17].classList.add("score_number");
-        upper2Arr[17].textContent = roundScore;
+        if (upper2Arr[17].textContent === "") {
+          upper2Arr[17].classList.add("score_number");
+          upper2Arr[17].textContent = roundScore;
+        }
       }
     }
 
@@ -424,11 +444,15 @@ btns.forEach((btn) =>
       });
       roundScore = addNumbers(sixes);
       if (turn === 1) {
-        upper1Arr[20].classList.add("score_number");
-        upper1Arr[20].textContent = roundScore;
+        if (upper1Arr[20].textContent === "") {
+          upper1Arr[20].classList.add("score_number");
+          upper1Arr[20].textContent = roundScore;
+        }
       } else {
-        upper2Arr[20].classList.add("score_number");
-        upper2Arr[20].textContent = roundScore;
+        if (upper2Arr[20].textContent === "") {
+          upper2Arr[20].classList.add("score_number");
+          upper2Arr[20].textContent = roundScore;
+        }
       }
     }
   })
@@ -474,11 +498,15 @@ btns2.forEach((btn) =>
     if (btn.classList.contains("three_kind")) {
       roundScore = addNumbers2(dice);
       if (turn === 1) {
-        lower1Arr[5].classList.add("score_number");
-        lower1Arr[5].textContent = roundScore;
+        if (lower1Arr[5].textContent === "") {
+          lower1Arr[5].classList.add("score_number");
+          lower1Arr[5].textContent = roundScore;
+        }
       } else {
-        lower2Arr[5].classList.add("score_number");
-        lower2Arr[5].textContent = roundScore;
+        if (lower2Arr[5].textContent === "") {
+          lower2Arr[5].classList.add("score_number");
+          lower2Arr[5].textContent = roundScore;
+        }
       }
     }
 
@@ -486,11 +514,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("four_kind")) {
       roundScore = addNumbers2(dice);
       if (turn === 1) {
-        lower1Arr[8].classList.add("score_number");
-        lower1Arr[8].textContent = roundScore;
+        if (lower1Arr[8].textContent === "") {
+          lower1Arr[8].classList.add("score_number");
+          lower1Arr[8].textContent = roundScore;
+        }
       } else {
-        lower2Arr[8].classList.add("score_number");
-        lower2Arr[8].textContent = roundScore;
+        if (lower2Arr[8].textContent === "") {
+          lower2Arr[8].classList.add("score_number");
+          lower2Arr[8].textContent = roundScore;
+        }
       }
     }
 
@@ -498,11 +530,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("full_house")) {
       roundScore = 25;
       if (turn === 1) {
-        lower1Arr[11].classList.add("score_number");
-        lower1Arr[11].textContent = roundScore;
+        if (lower1Arr[11].textContent === "") {
+          lower1Arr[11].classList.add("score_number");
+          lower1Arr[11].textContent = roundScore;
+        }
       } else {
-        lower2Arr[11].classList.add("score_number");
-        lower2Arr[11].textContent = roundScore;
+        if (lower2Arr[11].textContent === "") {
+          lower2Arr[11].classList.add("score_number");
+          lower2Arr[11].textContent = roundScore;
+        }
       }
     }
 
@@ -510,11 +546,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("small_straight")) {
       roundScore = 30;
       if (turn === 1) {
-        lower1Arr[14].classList.add("score_number");
-        lower1Arr[14].textContent = roundScore;
+        if (lower1Arr[14].textContent === "") {
+          lower1Arr[14].classList.add("score_number");
+          lower1Arr[14].textContent = roundScore;
+        }
       } else {
-        lower2Arr[14].classList.add("score_number");
-        lower2Arr[14].textContent = roundScore;
+        if (lower2Arr[14].textContent === "") {
+          lower2Arr[14].classList.add("score_number");
+          lower2Arr[14].textContent = roundScore;
+        }
       }
     }
 
@@ -522,11 +562,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("large_straight")) {
       roundScore = 40;
       if (turn === 1) {
-        lower1Arr[17].classList.add("score_number");
-        lower1Arr[17].textContent = roundScore;
+        if (lower1Arr[17].textContent === "") {
+          lower1Arr[17].classList.add("score_number");
+          lower1Arr[17].textContent = roundScore;
+        }
       } else {
-        lower2Arr[17].classList.add("score_number");
-        lower2Arr[17].textContent = roundScore;
+        if (lower2Arr[17].textContent === "") {
+          lower2Arr[17].classList.add("score_number");
+          lower2Arr[17].textContent = roundScore;
+        }
       }
     }
 
@@ -534,11 +578,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("yahtzee")) {
       roundScore = 50;
       if (turn === 1) {
-        lower1Arr[20].classList.add("score_number");
-        lower1Arr[20].textContent = roundScore;
+        if (lower1Arr[20].textContent === "") {
+          lower1Arr[20].classList.add("score_number");
+          lower1Arr[20].textContent = roundScore;
+        }
       } else {
-        lower2Arr[20].classList.add("score_number");
-        lower2Arr[20].textContent = roundScore;
+        if (lower2Arr[20].textContent === "") {
+          lower2Arr[20].classList.add("score_number");
+          lower2Arr[20].textContent = roundScore;
+        }
       }
     }
 
@@ -546,11 +594,15 @@ btns2.forEach((btn) =>
     else if (btn.classList.contains("chance")) {
       roundScore = addNumbers2(dice);
       if (turn === 1) {
-        lower1Arr[23].classList.add("score_number");
-        lower1Arr[23].textContent = roundScore;
+        if (lower1Arr[23].textContent === "") {
+          lower1Arr[23].classList.add("score_number");
+          lower1Arr[23].textContent = roundScore;
+        }
       } else {
-        lower2Arr[23].classList.add("score_number");
-        lower2Arr[23].textContent = roundScore;
+        if (lower2Arr[23].textContent === "") {
+          lower2Arr[23].classList.add("score_number");
+          lower2Arr[23].textContent = roundScore;
+        }
       }
     }
   })
