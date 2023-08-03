@@ -3,9 +3,14 @@
   color: white;
 }
 
+h1 {
+  margin-left: 290px;
+}
+
 .die {
   display: flex;
   gap: 40px;
+  margin-left: 140px;
 }
 
 .dice {
@@ -24,6 +29,10 @@
 .roll_btn {
   height: 20px;
   background-color: red;
+}
+
+.turn {
+  margin-left: 200px;
 }
 
 img {
@@ -101,17 +110,31 @@ img {
   margin-top: 17px;
   padding: 5px;
   font-size: 10px;
+  margin-left: 27px;
+  margin-right: 27px;
 }
 .upper_btns {
   margin-top: 30px;
 }
 .lower_btns {
-  margin-top: 48px;
+  margin-top: 50px;
+}
+.zero_btns {
+  margin-top: 50px;
 }
 .choose_btn2 {
   display: flex;
   background-color: white;
   border: red solid 1px;
+  color: black;
+  margin-top: 13px;
+  padding: 5px;
+  font-size: 10px;
+}
+.choose_btn_zero {
+  display: flex;
+  background-color: red;
+  border: white solid 1px;
   color: black;
   margin-top: 13px;
   padding: 5px;
