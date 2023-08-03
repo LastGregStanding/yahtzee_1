@@ -120,13 +120,13 @@ upper1Arr[19].textContent = "Add Sixes";
 upper1Arr[20].textContent = "";
 upper1Arr[21].textContent = "Total Score";
 upper1Arr[22].textContent = "------------->";
-upper1Arr[23].textContent = "";
+upper1Arr[23].textContent = 0;
 upper1Arr[24].textContent = "Bonus >=63";
 upper1Arr[25].textContent = "Score 35";
-upper1Arr[26].textContent = "";
+upper1Arr[26].textContent = 0;
 upper1Arr[27].textContent = "Upper Total";
 upper1Arr[28].textContent = "------------->";
-upper1Arr[29].textContent = "";
+upper1Arr[29].textContent = 0;
 
 for (let i = 21; i < upper1Arr.length; i++) {
   upper1Arr[i].style.backgroundColor = "cyan";
@@ -174,13 +174,13 @@ lower1Arr[22].textContent = "Add All Dice";
 lower1Arr[23].textContent = "";
 lower1Arr[24].textContent = "Lower Score";
 lower1Arr[25].textContent = "------------->";
-lower1Arr[26].textContent = "";
+lower1Arr[26].textContent = 0;
 lower1Arr[27].textContent = "Upper Total";
 lower1Arr[28].textContent = "------------->";
-lower1Arr[29].textContent = "";
+lower1Arr[29].textContent = 0;
 lower1Arr[30].textContent = "Grand Total";
 lower1Arr[31].textContent = "------------->";
-lower1Arr[32].textContent = "";
+lower1Arr[32].textContent = 0;
 
 for (let i = 24; i < lower1Arr.length; i++) {
   lower1Arr[i].style.backgroundColor = "cyan";
@@ -226,13 +226,13 @@ upper2Arr[19].textContent = "Add Sixes";
 upper2Arr[20].textContent = "";
 upper2Arr[21].textContent = "Total Score";
 upper2Arr[22].textContent = "------------->";
-upper2Arr[23].textContent = "";
+upper2Arr[23].textContent = 0;
 upper2Arr[24].textContent = "Bonus >=63";
 upper2Arr[25].textContent = "Score 35";
-upper2Arr[26].textContent = "";
+upper2Arr[26].textContent = 0;
 upper2Arr[27].textContent = "Upper Total";
 upper2Arr[28].textContent = "------------->";
-upper2Arr[29].textContent = "";
+upper2Arr[29].textContent = 0;
 
 for (let i = 21; i < upper2Arr.length; i++) {
   upper2Arr[i].style.backgroundColor = "cyan";
@@ -280,13 +280,13 @@ lower2Arr[22].textContent = "Add All Dice";
 lower2Arr[23].textContent = "";
 lower2Arr[24].textContent = "Lower Score";
 lower2Arr[25].textContent = "------------->";
-lower2Arr[26].textContent = "";
+lower2Arr[26].textContent = 0;
 lower2Arr[27].textContent = "Upper Total";
 lower2Arr[28].textContent = "------------->";
-lower2Arr[29].textContent = "";
+lower2Arr[29].textContent = 0;
 lower2Arr[30].textContent = "Grand Total";
 lower2Arr[31].textContent = "------------->";
-lower2Arr[32].textContent = "";
+lower2Arr[32].textContent = 0;
 
 for (let i = 24; i < lower2Arr.length; i++) {
   lower2Arr[i].style.backgroundColor = "cyan";
@@ -606,19 +606,11 @@ btns2.forEach((btn) =>
         }
       }
     }
+    checkScore();
   })
 );
 //#endregion
 
-// Add scores
-// const upper1Score = [
-//   Number(upper1Arr[5]),
-//   upper1Arr[8],
-//   upper1Arr[11],
-//   upper1Arr[14],
-//   upper1Arr[17],
-//   upper1Arr[20],
-// ];
 const upper2Score = [];
 const upper3Score = [];
 const upper4Score = [];
@@ -626,6 +618,7 @@ let player1ScoreTotal;
 let player2ScoreTotal;
 
 const checkScore = function () {
+  // Player 1 upper score
   const upper1Score = [
     Number(upper1Arr[5].textContent),
     Number(upper1Arr[8].textContent),
@@ -635,17 +628,73 @@ const checkScore = function () {
     Number(upper1Arr[20].textContent),
   ];
   let totalScore = 0;
-  if (upper1Score.every((score) => score >= 0)) {
-    for (let i = 0; i < upper1Score.length; i++) {
-      totalScore += upper1Score[i];
-    }
-    upper1Arr[23].textContent = totalScore;
-    if (totalScore >= 63) {
-      totalScore += 35;
-      upper1Arr[26].textContent = 35;
-    } else {
-      upper1Arr[26].textContent = 0;
-    }
-    upper1Arr[29].textContent = totalScore;
+  for (let i = 0; i < upper1Score.length; i++) {
+    totalScore += upper1Score[i];
   }
+  upper1Arr[23].textContent = totalScore;
+  if (totalScore >= 63) {
+    totalScore += 35;
+    upper1Arr[26].textContent = 35;
+  } else {
+    upper1Arr[26].textContent = 0;
+  }
+  upper1Arr[29].textContent = totalScore;
+  lower1Arr[29].textContent = totalScore;
+
+  // Player 2 upper score
+  const upper2Score = [
+    Number(upper2Arr[5].textContent),
+    Number(upper2Arr[8].textContent),
+    Number(upper2Arr[11].textContent),
+    Number(upper2Arr[14].textContent),
+    Number(upper2Arr[17].textContent),
+    Number(upper2Arr[20].textContent),
+  ];
+  totalScore = 0;
+  for (let i = 0; i < upper2Score.length; i++) {
+    totalScore += upper2Score[i];
+  }
+  upper2Arr[23].textContent = totalScore;
+  if (totalScore >= 63) {
+    totalScore += 35;
+    upper2Arr[26].textContent = 35;
+  } else {
+    upper2Arr[26].textContent = 0;
+  }
+  upper2Arr[29].textContent = totalScore;
+  lower2Arr[29].textContent = totalScore;
+
+  // Player 1 lower score
+  const lower1Score = [
+    Number(lower1Arr[5].textContent),
+    Number(lower1Arr[8].textContent),
+    Number(lower1Arr[11].textContent),
+    Number(lower1Arr[14].textContent),
+    Number(lower1Arr[17].textContent),
+    Number(lower1Arr[20].textContent),
+    Number(lower1Arr[23].textContent),
+  ];
+  totalScore = 0;
+  for (let i = 0; i < lower1Score.length; i++) {
+    totalScore += lower1Score[i];
+  }
+  lower1Arr[26].textContent = totalScore;
+  lower1Arr[32].textContent = totalScore + Number(lower1Arr[29].textContent);
+
+  // Player 2 lower score
+  const lower2Score = [
+    Number(lower2Arr[5].textContent),
+    Number(lower2Arr[8].textContent),
+    Number(lower2Arr[11].textContent),
+    Number(lower2Arr[14].textContent),
+    Number(lower2Arr[17].textContent),
+    Number(lower2Arr[20].textContent),
+    Number(lower2Arr[23].textContent),
+  ];
+  totalScore = 0;
+  for (let i = 0; i < lower2Score.length; i++) {
+    totalScore += lower2Score[i];
+  }
+  lower2Arr[26].textContent = totalScore;
+  lower2Arr[32].textContent = totalScore + Number(lower2Arr[29].textContent);
 };
