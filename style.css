@@ -4,13 +4,13 @@
 }
 
 h1 {
-  margin-left: 290px;
+  margin-left: 310px;
 }
 
 .die {
   display: flex;
   gap: 40px;
-  margin-left: 140px;
+  margin-left: 170px;
 }
 
 .dice {
@@ -32,7 +32,7 @@ h1 {
 }
 
 .turn {
-  margin-left: 200px;
+  margin-left: 270px;
 }
 
 img {
@@ -93,6 +93,7 @@ img {
 .player_scorecards {
   display: flex;
   gap: 300px;
+  margin-left: 100px;
 }
 .turn_roll {
   display: flex;
@@ -139,4 +140,8 @@ img {
   margin-top: 13px;
   padding: 5px;
   font-size: 10px;
+}
+
+.gameboard {
+  margin-left: 100px;
 }
