@@ -41,6 +41,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   height: 400px;
   width: 300px;
+  border: red solid 1px;
 }
 .lower_section_1 {
   margin-top: 20px;
@@ -48,12 +49,14 @@ img {
   grid-template-columns: repeat(3, 1fr);
   height: 400px;
   width: 300px;
+  border: red solid 1px;
 }
 .upper_section_2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 400px;
   width: 300px;
+  border: red solid 1px;
 }
 .lower_section_2 {
   margin-top: 20px;
@@ -61,6 +64,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   height: 400px;
   width: 300px;
+  border: red solid 1px;
 }
 
 .cell {
@@ -87,4 +91,28 @@ img {
 }
 .hidden {
   color: transparent;
+}
+.choose_btn {
+  display: flex;
+  background-color: white;
+  border: red solid 1px;
+  color: black;
+  margin-top: 17px;
+  padding: 5px;
+  font-size: 10px;
+}
+.upper_btns {
+  margin-top: 30px;
+}
+.lower_btns {
+  margin-top: 48px;
+}
+.choose_btn2 {
+  display: flex;
+  background-color: white;
+  border: red solid 1px;
+  color: black;
+  margin-top: 13px;
+  padding: 5px;
+  font-size: 10px;
 }

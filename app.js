@@ -3,9 +3,12 @@
 const rollBtn = document.querySelector(".roll_btn");
 const keepBtns = document.querySelectorAll(".keep");
 const playerTurn = document.querySelector(".turn");
+const upperBtns = document.querySelector(".upper_btns");
+const lowerBtns = document.querySelector(".lower_btns");
 let turn = 1;
 const dice = [];
 let rollCount = 0;
+let roundScore;
 // Random number 1-6
 const randomNumber = () => Math.floor(Math.random() * 6 + 1);
 
@@ -67,6 +70,21 @@ keepBtns.forEach((btn) =>
     }
   })
 );
+
+let addNumbers = function (dice) {
+  let number = 0;
+  for (let i = 0; i < dice.length; i++) {
+    number += dice[i];
+  }
+  return number;
+};
+let addNumbers2 = function (dice) {
+  let number = 0;
+  for (let i = 1; i < dice.length; i++) {
+    number += dice[i];
+  }
+  return number;
+};
 
 //#region Player 1 Score section
 const upper1 = document.querySelector(".upper_section_1");
@@ -134,10 +152,10 @@ lower1Arr[0].textContent = "Lower Section";
 lower1Arr[1].textContent = "How To Score";
 lower1Arr[2].textContent = "Game Score";
 lower1Arr[3].textContent = "3 of a kind";
-lower1Arr[4].textContent = "Add all dice";
+lower1Arr[4].textContent = "Add All Dice";
 lower1Arr[5].textContent = null;
 lower1Arr[6].textContent = "4 of a kind";
-lower1Arr[7].textContent = "Add all dice";
+lower1Arr[7].textContent = "Add All Dice";
 lower1Arr[8].textContent = null;
 lower1Arr[9].textContent = "Full House";
 lower1Arr[10].textContent = "Score 25";
@@ -164,7 +182,7 @@ lower1Arr[30].textContent = "Grand Total";
 lower1Arr[31].textContent = "------------->";
 lower1Arr[32].textContent = null;
 
-for (let i = 21; i < lower1Arr.length; i++) {
+for (let i = 24; i < lower1Arr.length; i++) {
   lower1Arr[i].style.backgroundColor = "cyan";
 }
 
@@ -240,10 +258,10 @@ lower2Arr[0].textContent = "Lower Section";
 lower2Arr[1].textContent = "How To Score";
 lower2Arr[2].textContent = "Game Score";
 lower2Arr[3].textContent = "3 of a kind";
-lower2Arr[4].textContent = "Add all dice";
+lower2Arr[4].textContent = "Add All Dice";
 lower2Arr[5].textContent = null;
 lower2Arr[6].textContent = "4 of a kind";
-lower2Arr[7].textContent = "Add all dice";
+lower2Arr[7].textContent = "Add All Dice";
 lower2Arr[8].textContent = null;
 lower2Arr[9].textContent = "Full House";
 lower2Arr[10].textContent = "Score 25";
@@ -270,7 +288,7 @@ lower2Arr[30].textContent = "Grand Total";
 lower2Arr[31].textContent = "------------->";
 lower2Arr[32].textContent = null;
 
-for (let i = 21; i < lower2Arr.length; i++) {
+for (let i = 24; i < lower2Arr.length; i++) {
   lower2Arr[i].style.backgroundColor = "cyan";
 }
 
@@ -279,3 +297,260 @@ lower2Arr[1].style.backgroundColor = "orange";
 lower2Arr[2].style.backgroundColor = "orange";
 //#endregion
 //#endregion
+
+//#region Upper Buttons
+let btns = [];
+for (let i = 5; i < 21; i += 3) {
+  let btn = document.createElement("button");
+  btn.textContent = "Choose";
+  btn.classList.add("choose_btn");
+  upperBtns.appendChild(btn);
+  switch (i) {
+    case 5:
+      btn.classList.add("aces");
+      break;
+    case 8:
+      btn.classList.add("twos");
+      break;
+    case 11:
+      btn.classList.add("threes");
+      break;
+    case 14:
+      btn.classList.add("fours");
+      break;
+    case 17:
+      btn.classList.add("fives");
+      break;
+    case 20:
+      btn.classList.add("sixes");
+      break;
+  }
+  btns.push(btn);
+}
+
+btns.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    // Aces
+    if (btn.classList.contains("aces")) {
+      let ones = dice.filter((e) => {
+        if (e === 1) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(ones);
+      if (turn === 1) {
+        upper1Arr[5].classList.add("score_number");
+        upper1Arr[5].textContent = roundScore;
+      } else {
+        upper2Arr[5].classList.add("score_number");
+        upper2Arr[5].textContent = roundScore;
+      }
+    }
+
+    // Twos
+    else if (btn.classList.contains("twos")) {
+      let twos = dice.filter((e) => {
+        if (e === 2) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(twos);
+      if (turn === 1) {
+        upper1Arr[8].classList.add("score_number");
+        upper1Arr[8].textContent = roundScore;
+      } else {
+        upper2Arr[8].classList.add("score_number");
+        upper2Arr[8].textContent = roundScore;
+      }
+    }
+
+    // Threes
+    else if (btn.classList.contains("threes")) {
+      let threes = dice.filter((e) => {
+        if (e === 3) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(threes);
+      if (turn === 1) {
+        upper1Arr[11].classList.add("score_number");
+        upper1Arr[11].textContent = roundScore;
+      } else {
+        upper2Arr[11].classList.add("score_number");
+        upper2Arr[11].textContent = roundScore;
+      }
+    }
+
+    // Fours
+    else if (btn.classList.contains("fours")) {
+      let fours = dice.filter((e) => {
+        if (e === 4) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(fours);
+      if (turn === 1) {
+        upper1Arr[14].classList.add("score_number");
+        upper1Arr[14].textContent = roundScore;
+      } else {
+        upper2Arr[14].classList.add("score_number");
+        upper2Arr[14].textContent = roundScore;
+      }
+    }
+
+    // Fives
+    else if (btn.classList.contains("fives")) {
+      let fives = dice.filter((e) => {
+        if (e === 5) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(fives);
+      if (turn === 1) {
+        upper1Arr[17].classList.add("score_number");
+        upper1Arr[17].textContent = roundScore;
+      } else {
+        upper2Arr[17].classList.add("score_number");
+        upper2Arr[17].textContent = roundScore;
+      }
+    }
+
+    // Sixes
+    else if (btn.classList.contains("sixes")) {
+      let sixes = dice.filter((e) => {
+        if (e === 6) {
+          return e;
+        }
+      });
+      roundScore = addNumbers(sixes);
+      if (turn === 1) {
+        upper1Arr[20].classList.add("score_number");
+        upper1Arr[20].textContent = roundScore;
+      } else {
+        upper2Arr[20].classList.add("score_number");
+        upper2Arr[20].textContent = roundScore;
+      }
+    }
+  })
+);
+//#endregion
+
+let btns2 = [];
+for (let i = 5; i < 24; i += 3) {
+  let btn = document.createElement("button");
+  btn.textContent = "Choose";
+  btn.classList.add("choose_btn2");
+  lowerBtns.appendChild(btn);
+  switch (i) {
+    case 5:
+      btn.classList.add("three_kind");
+      break;
+    case 8:
+      btn.classList.add("four_kind");
+      break;
+    case 11:
+      btn.classList.add("full_house");
+      break;
+    case 14:
+      btn.classList.add("small_straight");
+      break;
+    case 17:
+      btn.classList.add("large_straight");
+      break;
+    case 20:
+      btn.classList.add("yahtzee");
+      break;
+    case 23:
+      btn.classList.add("chance");
+      break;
+  }
+  btns2.push(btn);
+}
+
+btns2.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    // 3 of a Kind
+    if (btn.classList.contains("three_kind")) {
+      roundScore = addNumbers2(dice);
+      if (turn === 1) {
+        lower1Arr[5].classList.add("score_number");
+        lower1Arr[5].textContent = roundScore;
+      } else {
+        lower2Arr[5].classList.add("score_number");
+        lower2Arr[5].textContent = roundScore;
+      }
+    }
+
+    // 4 of a kind
+    else if (btn.classList.contains("four_kind")) {
+      roundScore = addNumbers2(dice);
+      if (turn === 1) {
+        lower1Arr[8].classList.add("score_number");
+        lower1Arr[8].textContent = roundScore;
+      } else {
+        lower2Arr[8].classList.add("score_number");
+        lower2Arr[8].textContent = roundScore;
+      }
+    }
+
+    // Full House
+    else if (btn.classList.contains("full_house")) {
+      roundScore = 25;
+      if (turn === 1) {
+        lower1Arr[11].classList.add("score_number");
+        lower1Arr[11].textContent = roundScore;
+      } else {
+        lower2Arr[11].classList.add("score_number");
+        lower2Arr[11].textContent = roundScore;
+      }
+    }
+
+    // Small Straight
+    else if (btn.classList.contains("small_straight")) {
+      roundScore = 30;
+      if (turn === 1) {
+        lower1Arr[14].classList.add("score_number");
+        lower1Arr[14].textContent = roundScore;
+      } else {
+        lower2Arr[14].classList.add("score_number");
+        lower2Arr[14].textContent = roundScore;
+      }
+    }
+
+    // Large Straight
+    else if (btn.classList.contains("large_straight")) {
+      roundScore = 40;
+      if (turn === 1) {
+        lower1Arr[17].classList.add("score_number");
+        lower1Arr[17].textContent = roundScore;
+      } else {
+        lower2Arr[17].classList.add("score_number");
+        lower2Arr[17].textContent = roundScore;
+      }
+    }
+
+    // Yahtzee
+    else if (btn.classList.contains("yahtzee")) {
+      roundScore = 50;
+      if (turn === 1) {
+        lower1Arr[20].classList.add("score_number");
+        lower1Arr[20].textContent = roundScore;
+      } else {
+        lower2Arr[20].classList.add("score_number");
+        lower2Arr[20].textContent = roundScore;
+      }
+    }
+
+    // Chance
+    else if (btn.classList.contains("chance")) {
+      roundScore = addNumbers2(dice);
+      if (turn === 1) {
+        lower1Arr[23].classList.add("score_number");
+        lower1Arr[23].textContent = roundScore;
+      } else {
+        lower2Arr[23].classList.add("score_number");
+        lower2Arr[23].textContent = roundScore;
+      }
+    }
+  })
+);
