@@ -5,7 +5,7 @@ const keepBtns = document.querySelectorAll(".keep");
 const playerTurn = document.querySelector(".turn");
 const upperBtns = document.querySelector(".upper_btns");
 const lowerBtns = document.querySelector(".lower_btns");
-let turn = 1;
+let turn = 2;
 const dice = [];
 let rollCount = 0;
 let roundScore;
@@ -16,6 +16,11 @@ const rollDice = function () {
   const turnOver = document.querySelector(".turn_over");
   // Reset keep buttons for next player
   if (rollCount === 0) {
+    if (turn === 1) {
+      turn = 2;
+    } else {
+      turn = 1;
+    }
     keepBtns.forEach((btn) => {
       btn.classList.remove("pressed");
       btn.style.backgroundColor = "green";
@@ -44,11 +49,6 @@ const rollDice = function () {
 
   // Black out keep buttons for end of turn
   if (rollCount === 3) {
-    if (turn === 1) {
-      turn = 2;
-    } else {
-      turn = 1;
-    }
     rollCount = 0;
     turnOver.classList.remove("hidden");
   }
@@ -435,6 +435,7 @@ btns.forEach((btn) =>
 );
 //#endregion
 
+//#region Bottom Buttons
 let btns2 = [];
 for (let i = 5; i < 24; i += 3) {
   let btn = document.createElement("button");
@@ -554,3 +555,4 @@ btns2.forEach((btn) =>
     }
   })
 );
+//#endregion
