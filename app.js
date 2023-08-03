@@ -9,6 +9,7 @@ const zeroBtns = document.querySelector(".zero_btns");
 let turn = 2;
 const dice = [];
 let rollCount = 0;
+let gameRound = 1;
 let roundScore;
 // Random number 1-6
 const randomNumber = () => Math.floor(Math.random() * 6 + 1);
@@ -50,6 +51,8 @@ const rollDice = function () {
 
   // Black out keep buttons for end of turn
   if (rollCount === 3) {
+    gameRound++;
+    gameOver();
     rollCount = 0;
     turnOver.classList.remove("hidden");
   }
@@ -851,3 +854,23 @@ const checkScore = function () {
   lower2Arr[32].textContent = totalScore + Number(lower2Arr[29].textContent);
 };
 //#endregion
+
+// Game over scenario!
+const gameOver = function () {
+  console.log(gameRound);
+  if (gameRound === 27) {
+    if (Number(lower1Arr[32].textContent) > Number(lower2Arr[32].textContent)) {
+      lower1Arr[32].style.backgroundColor = "green";
+      lower2Arr[32].style.backgroundColor = "red";
+    } else if (
+      Number(lower1Arr[32].textContent) < Number(lower2Arr[32].textContent)
+    ) {
+      lower1Arr[32].style.backgroundColor = "red";
+      lower2Arr[32].style.backgroundColor = "green";
+    } else {
+      console.log("it was a tie");
+      lower1Arr[32].style.backgroundColor = "pink";
+      lower2Arr[32].style.backgroundColor = "pink";
+    }
+  }
+};
