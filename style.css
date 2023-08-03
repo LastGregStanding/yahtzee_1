@@ -155,3 +155,9 @@ img {
 .gameboard {
   margin-left: 100px;
 }
+
+.reset_btn {
+  margin-left: 330px;
+  background-color: yellow;
+  color: black;
+}

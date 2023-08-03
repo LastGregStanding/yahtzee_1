@@ -6,8 +6,9 @@ const playerTurn = document.querySelector(".turn");
 const upperBtns = document.querySelector(".upper_btns");
 const lowerBtns = document.querySelector(".lower_btns");
 const zeroBtns = document.querySelector(".zero_btns");
+const resetBtn = document.querySelector(".reset_btn");
 let turn = 2;
-const dice = [];
+let dice = [];
 let rollCount = 0;
 let roundScore;
 // Random number 1-6
@@ -921,3 +922,77 @@ const gameOver = function () {
     }
   }
 };
+
+//#region reset game button
+resetBtn.addEventListener("mouseover", function () {
+  resetBtn.classList.add("hover");
+});
+resetBtn.addEventListener("mouseout", function () {
+  resetBtn.classList.remove("hover");
+});
+
+resetBtn.addEventListener("click", function () {
+  resetBtn.classList.remove("hover");
+  turn = 2;
+  rollCount = 0;
+  roundScore = 0;
+  playerTurn.textContent = `Player 1's Turn:`;
+
+  // Reset Keep Buttons
+  keepBtns.forEach((btn) => {
+    if (btn.classList.contains("pressed")) {
+      btn.classList.remove("pressed");
+    }
+    btn.style.backgroundColor = "green";
+  });
+
+  // Reset Dice
+  for (let i = 1; i < dice.length; i++) {
+    let diceImage = document.getElementById(`dice_${i}`);
+    diceImage.src = `dice/dice-1.png`;
+  }
+
+  //#region Scorecard reset
+  lower1Arr[32].style.backgroundColor = "cyan";
+  lower2Arr[32].style.backgroundColor = "cyan";
+  upper1Arr[5].textContent = "";
+  upper1Arr[8].textContent = "";
+  upper1Arr[11].textContent = "";
+  upper1Arr[14].textContent = "";
+  upper1Arr[17].textContent = "";
+  upper1Arr[20].textContent = "";
+  upper1Arr[23].textContent = 0;
+  upper1Arr[26].textContent = 0;
+  upper1Arr[29].textContent = 0;
+  lower1Arr[5].textContent = "";
+  lower1Arr[8].textContent = "";
+  lower1Arr[11].textContent = "";
+  lower1Arr[14].textContent = "";
+  lower1Arr[17].textContent = "";
+  lower1Arr[20].textContent = "";
+  lower1Arr[23].textContent = "";
+  lower1Arr[26].textContent = 0;
+  lower1Arr[29].textContent = 0;
+  lower1Arr[32].textContent = 0;
+  upper2Arr[5].textContent = "";
+  upper2Arr[8].textContent = "";
+  upper2Arr[11].textContent = "";
+  upper2Arr[14].textContent = "";
+  upper2Arr[17].textContent = "";
+  upper2Arr[20].textContent = "";
+  upper2Arr[23].textContent = 0;
+  upper2Arr[26].textContent = 0;
+  upper2Arr[29].textContent = 0;
+  lower2Arr[5].textContent = "";
+  lower2Arr[8].textContent = "";
+  lower2Arr[11].textContent = "";
+  lower2Arr[14].textContent = "";
+  lower2Arr[17].textContent = "";
+  lower2Arr[20].textContent = "";
+  lower2Arr[23].textContent = "";
+  lower2Arr[26].textContent = 0;
+  lower2Arr[29].textContent = 0;
+  lower2Arr[32].textContent = 0;
+  //#endregion
+});
+//#endregion
