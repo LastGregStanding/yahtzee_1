@@ -28,8 +28,7 @@ const rollDice = function () {
       btn.classList.remove("pressed");
       btn.style.backgroundColor = "green";
     });
-    playerTurn.textContent = `Player ${turn}'s Turn:`;
-    turnOver.classList.add("hidden");
+    playerTurn.textContent = `Player ${turn}'s Turn`;
   }
 
   for (let i = 1; i < 6; i++) {
@@ -48,11 +47,11 @@ const rollDice = function () {
   }
 
   rollCount++;
+  turnOver.textContent = `Roll ${rollCount}`;
 
   // Black out keep buttons for end of turn
   if (rollCount === 3) {
     rollCount = 0;
-    turnOver.classList.remove("hidden");
   }
 };
 
@@ -936,7 +935,9 @@ resetBtn.addEventListener("click", function () {
   turn = 2;
   rollCount = 0;
   roundScore = 0;
-  playerTurn.textContent = `Player 1's Turn:`;
+  playerTurn.textContent = `Player 1's Turn`;
+  const turnOver = document.querySelector(".turn_over");
+  turnOver.textContent = "Roll";
 
   // Reset Keep Buttons
   keepBtns.forEach((btn) => {

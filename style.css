@@ -33,13 +33,25 @@ h1 {
 }
 
 .roll_btn {
-  height: 20px;
+  height: 30px;
+  width: 80px;
   background-color: red;
   border-radius: 8px;
+  margin-left: 330px;
+  margin-top: 20px;
 }
 
 .turn {
-  margin-left: 270px;
+  margin-left: 310px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.turn_over {
+  margin-top: 10px;
+  margin-left: 350px;
+  font-size: 18px;
+  color: white;
 }
 
 img {
@@ -60,6 +72,7 @@ img {
   width: 300px;
   border: red solid 1px;
 }
+
 .lower_section_1 {
   margin-top: 20px;
   display: grid;
@@ -68,6 +81,7 @@ img {
   width: 300px;
   border: red solid 1px;
 }
+
 .upper_section_2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,6 +89,7 @@ img {
   width: 300px;
   border: red solid 1px;
 }
+
 .lower_section_2 {
   margin-top: 20px;
   display: grid;
@@ -89,27 +104,29 @@ img {
   color: black;
   border: black solid 1px;
 }
+
 .upper_sections {
   display: flex;
   gap: 20px;
 }
+
 .lower_sections {
   display: flex;
   gap: 20px;
 }
+
 .player_scorecards {
   display: flex;
   gap: 300px;
   margin-left: 100px;
 }
+
 .turn_roll {
   display: flex;
   margin: 20px;
   gap: 20px;
 }
-.hidden {
-  color: transparent;
-}
+
 .choose_btn {
   display: flex;
   background-color: white;
@@ -122,15 +139,19 @@ img {
   margin-right: 27px;
   border-radius: 8px;
 }
+
 .upper_btns {
   margin-top: 30px;
 }
+
 .lower_btns {
   margin-top: 50px;
 }
+
 .zero_btns {
   margin-top: 50px;
 }
+
 .choose_btn2 {
   display: flex;
   background-color: white;
@@ -141,6 +162,7 @@ img {
   font-size: 10px;
   border-radius: 8px;
 }
+
 .choose_btn_zero {
   display: flex;
   background-color: red;
