@@ -455,6 +455,7 @@ btns.forEach((btn) =>
         }
       }
     }
+    checkScore();
   })
 );
 //#endregion
@@ -608,3 +609,43 @@ btns2.forEach((btn) =>
   })
 );
 //#endregion
+
+// Add scores
+// const upper1Score = [
+//   Number(upper1Arr[5]),
+//   upper1Arr[8],
+//   upper1Arr[11],
+//   upper1Arr[14],
+//   upper1Arr[17],
+//   upper1Arr[20],
+// ];
+const upper2Score = [];
+const upper3Score = [];
+const upper4Score = [];
+let player1ScoreTotal;
+let player2ScoreTotal;
+
+const checkScore = function () {
+  const upper1Score = [
+    Number(upper1Arr[5].textContent),
+    Number(upper1Arr[8].textContent),
+    Number(upper1Arr[11].textContent),
+    Number(upper1Arr[14].textContent),
+    Number(upper1Arr[17].textContent),
+    Number(upper1Arr[20].textContent),
+  ];
+  let totalScore = 0;
+  if (upper1Score.every((score) => score >= 0)) {
+    for (let i = 0; i < upper1Score.length; i++) {
+      totalScore += upper1Score[i];
+    }
+    upper1Arr[23].textContent = totalScore;
+    if (totalScore >= 63) {
+      totalScore += 35;
+      upper1Arr[26].textContent = 35;
+    } else {
+      upper1Arr[26].textContent = 0;
+    }
+    upper1Arr[29].textContent = totalScore;
+  }
+};
