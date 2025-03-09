@@ -8,8 +8,8 @@
   </head>
   <body>
     <div class="gameboard">
-        <h1>Yahtzee</h1>
-        <div class="die">
+        <h1 class="game_title">Yahtzee</h1>
+        <div class="dice_container">
           <div class="dice_combo">
             <img class="dice" id="dice_1" src="dice/dice-1.png" alt="Dice-1"></img>
             <button class="keep" id="keep_1">Keep</button>
@@ -38,22 +38,18 @@
         <div>Player 1 Scorecard</div>
         <div>Player 2 Scorecard</div>
       </div>
-      <div class="middle_section">
-      <div class="upper_sections">
-        <div class="upper_section_1"></div>
+     <div class="upper_section_container">
+        <div class="upper_section_1 upper_section"></div>
         <div class="upper_btns"></div>
-        <div class="upper_section_2"></div>
+        <div class="upper_section_2 upper_section"></div>
       </div>
-    </div>
-    <div class="bottom_section">
-      <div class="lower_sections">
-        <div class="lower_section_1"></div>
+      <div class="lower_section_container">
+        <div class="lower_section_1 lower_section"></div>
         <div class="lower_btns"></div>
         <div class="zero_btns"></div>
-        <div class="lower_section_2"></div>
+        <div class="lower_section_2 lower_section"></div>
       </div>
       <button class="reset_btn">Reset Game</button>
-    </div>
   </div>
     <script src="app.js"></script>
   </body>

@@ -42,127 +42,14 @@ select {
 }
 
 .gameboard {
-  width: 1000px;
-  margin: 0 auto;
+  outline: 3px solid purple;
+  width: 80%;
+  max-width: 1200px;
+  margin: 10vh auto;
 }
 
-h1 {
-  width: 140px;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.die {
-  display: flex;
-  gap: 40px;
-  width: 435px;
-  margin: 0 auto;
-}
-
-.dice {
-  width: 50px;
-  height: 50px;
-}
-
-.keep {
-  margin: 0 auto;
-  margin-top: 20px;
-  background-color: green;
-  border-radius: 8px;
-}
-
-.hover {
-  opacity: 0.5;
-}
-
-.roll_btn {
-  height: 30px;
-  width: 80px;
-  background-color: red;
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 460px;
-}
-
-.turn {
-  width: 120px;
-  font-size: 20px;
-  margin-top: 20px;
-  margin: 0 auto;
-}
-
-.turn_over {
-  margin: 0 auto;
-  margin-top: 10px;
-  width: 30px;
-  font-size: 18px;
-  color: white;
-}
-
-.player_scorecards {
-  display: flex;
-  gap: 300px;
-  width: 550px;
-  margin: 0 auto;
-}
-
-img {
-  height: 100px;
-  width: 100px;
-}
-
-.dice_combo {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50px;
-  margin-top: 30px;
-}
-
-.middle_section {
-  width: 750px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.bottom_section {
-  width: 750px;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.upper_section_1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 400px;
-  width: 300px;
-  border: red solid 1px;
-}
-
-.lower_section_1 {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 400px;
-  width: 300px;
-  border: red solid 1px;
-}
-
-.upper_section_2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 400px;
-  width: 300px;
-  border: red solid 1px;
-}
-
-.lower_section_2 {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 400px;
-  width: 300px;
-  border: red solid 1px;
+.game_title {
+  text-align: center;
 }
 
 .cell {
@@ -171,20 +58,107 @@ img {
   border: black solid 1px;
 }
 
-.upper_sections {
+/********* Dice **********/
+
+.dice_container {
+  /* outline: 3px solid yellow; */
   display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
   gap: 20px;
 }
 
-.lower_sections {
+.dice {
+  /* outline: 3px solid green; */
+  height: 60%;
+  width: 80%;
+  margin: auto;
+}
+
+.dice_combo {
+  /* outline: 3px solid red; */
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/********* End Dice **********/
+
+.keep {
+  background-color: green;
+  border-radius: 8px;
+  width: 70%;
+  margin: auto;
+}
+
+.hover {
+  opacity: 0.5;
+}
+
+.turn {
+  font-size: 20px;
+}
+
+.turn_over {
+  font-size: 18px;
+  color: white;
+}
+
+.player_scorecards {
+  display: flex;
+}
+
+/********* Upper Section **********/
+
+.upper_section_container {
+  outline: 3px solid blue;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.upper_section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+  border: red solid 1px;
+}
+
+/********* Lower Section **********/
+
+.lower_section_container {
+  outline: 3px solid blue;
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.lower_section {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 400px;
+  width: 300px;
+  border: red solid 1px;
 }
 
 .turn_roll {
   display: flex;
   margin: 20px;
   gap: 20px;
+}
+
+/********* Game Buttons **********/
+
+.upper_btns {
+  margin-top: 30px;
+}
+
+.lower_btns,
+.zero_btns {
+  margin-top: 50px;
 }
 
 .choose_btn {
@@ -200,19 +174,8 @@ img {
   border-radius: 8px;
 }
 
-.upper_btns {
-  margin-top: 30px;
-}
-
-.lower_btns {
-  margin-top: 50px;
-}
-
-.zero_btns {
-  margin-top: 50px;
-}
-
-.choose_btn2 {
+.choose_btn2,
+.choose_btn_zero {
   display: flex;
   background-color: white;
   border: red solid 1px;
@@ -224,20 +187,20 @@ img {
 }
 
 .choose_btn_zero {
-  display: flex;
   background-color: red;
   border: white solid 1px;
-  color: black;
-  margin-top: 13px;
-  padding: 5px;
-  font-size: 10px;
-  border-radius: 8px;
 }
 
 .reset_btn {
-  margin-left: 330px;
   background-color: yellow;
   color: black;
+}
+
+.roll_btn {
+  height: 30px;
+  width: 70px;
+  background-color: red;
+  border-radius: 8px;
 }
 
 button:hover {
